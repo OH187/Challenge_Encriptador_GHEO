@@ -30,8 +30,8 @@ body{
     resize: none;
 }
 .texto-input:hover{
-    border: none;
-    /* border: 1px solid #0A3871; */
+    /* border: none; */
+    border: 1px solid #0A3871;
 }
 .texto-input::placeholder{
     font-weight: 700;
@@ -145,6 +145,7 @@ body{
 footer{
     text-align: center;
     color: #0A3871;
+    margin-bottom: 0px;
 }
 
 /* MEDIA QUERIES */
@@ -206,17 +207,17 @@ footer{
     .boton-encriptar{
         width: 40%;
     }
-    .imagen-texto{
+    .imagen-texto img{
         height: 250px;
+        width: 100%;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url('/img/muneco.jpg');
     }
     .info_texto{
         margin-bottom: 0px;
     }
     .encabezado{
-        max-width: 1200px;
+        max-width: 1400px;
         margin: auto;
     }
     #btn-copiar{
