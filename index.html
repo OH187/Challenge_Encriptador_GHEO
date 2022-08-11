@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>GHEO-Encriptador</title>
+</head>
+<body>
+    
+    <header class="encabezado">
+        <img class="logo-alura" src="img/Vector.jpg" alt="Logo alura">
+        <!-- <img class="encabezado_modo-oscuro" src="img/modo-oscuro.png" alt="Icono de modo oscuro"> -->
+    </header>
+
+    <div class="contenedor">
+
+            <div class="contenedor-encriptador">
+                <textarea onkeypress="return (event.charCode >= 48 && event.charCode <= 57 || event.charCode >= 90 && event.charCode <= 122)" autofocus class="texto-input" name="ingrese texto" id="texto" placeholder="Ingrese el texto aqui" cols="10" wrap="hard" required></textarea>
+                <!-- El event.charCode me sirve para restringir mayusculas o numeros en un input o textarea (90-122 me sirve para que no ingrese mayusculas) y 48-57 para que pueda ingresar numeros -->
+                    <span class="info_texto"><img class="info" src="img/info.png" alt="Icono de informacion"> Solo letras minúsculas y sin acentos</span>
+                        <div class="botones">
+                            <button id="boton-encriptar" class="boton-encriptar">Encriptar</button>
+                            <button class="boton-desencriptar">Desencriptar</button>
+                        </div> 
+            </div>
+
+            <div id="mensaje" class="mensaje">
+                <h3 id="h3" class="mensaje-principal">Ningun mensaje fue encontrado</h3>
+                <div id="imagen" class="imagen-texto"></div>
+                <p id="mensaje_parrafo" class="mensaje_parrafo">Ingresa el texto a encriptar o desencriptar</p>
+            </div> 
+
+            <div id="contenedor-resultado" >
+                <h3 class="mensaje-principal">Mensaje encriptado</h3>
+                <textarea id="resultado" class="resultado-textarea"></textarea>
+                <div class="boton-copiar"><button onclick="copiar();" id="btn-copiar" value="Copiar">Copiar</button></div>
+            </div>
+
+    </div>
+    <footer>
+        <p>Oscar Hernández &copy; 2022</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
