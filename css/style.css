@@ -147,6 +147,9 @@ footer{
     color: #0A3871;
     margin-bottom: 0px;
 }
+.imagen-texto img{
+    display: none;
+}
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 490px) {
@@ -208,6 +211,7 @@ footer{
         width: 40%;
     }
     .imagen-texto img{
+        display: block;
         height: 250px;
         width: 100%;
         background-repeat: no-repeat;
